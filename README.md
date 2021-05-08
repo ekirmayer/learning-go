@@ -44,3 +44,24 @@ go get github.com/spf13/cobra@v1.1.3
 ### Known libraries
 
 [cobra](https://github.com/spf13/cobra) - Cobra is both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
+
+
+# Distributing the packages as binaries
+
+You can use the same code and build a multi platform from a single platform
+
+Build from within a container all platform
+
+```shell
+// Start a golang container
+docker run -it --rm -v ./CobraCLI:/go -w /go golang bash
+
+// MacOS build
+GOOS=darwin GOARCH=amd64 go build -o motd.darwin
+
+// Windows build
+GOOS=windows GOARCH=amd64 go build -o motd.exe
+
+// Linux build
+GOOS=linux GOARCH=amd64 go build -o motd
+```
