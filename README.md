@@ -29,3 +29,18 @@ func main() {
     fmt.println("somenthing") // This is trailing comment
 }
 ```
+
+
+## Third-Party Packages
+
+go get - download (and compile if needed) 3rd-party libraries
+go install - build and install your code as binary to the /go/bin folder
+
+```shell
+go get github.com/spf13/cobra@v1.1.3
+```
+
+
+### Known libraries
+
+[cobra](https://github.com/spf13/cobra) - Cobra is both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.
